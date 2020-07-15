@@ -2,6 +2,7 @@ package com.example.navigationcomponent30032020;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -25,5 +26,17 @@ public class LoginFragment extends Fragment {
         mSignup = mView.findViewById(R.id.buttonGoSignUp);
         mSignIn = mView.findViewById(R.id.buttonSignIn);
         return mView;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        mSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        super.onActivityCreated(savedInstanceState);
+
     }
 }
