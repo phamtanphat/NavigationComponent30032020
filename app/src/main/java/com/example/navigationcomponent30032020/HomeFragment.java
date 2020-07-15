@@ -7,14 +7,21 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class HomeFragment extends Fragment {
 
 
+    View mView;
+    TextView mTvName;
+    Button mLogout;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        mView = inflater.inflate(R.layout.fragment_home, container, false);
+        mTvName = mView.findViewById(R.id.textviewName);
+        mLogout = mView.findViewById(R.id.buttonLogout);
+        return mView;
     }
 }
