@@ -10,7 +10,21 @@
         android:id="@+id/homeFragment"
         android:name="com.example.navigationcomponent30032020.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="taikhoan"
+            android:defaultValue="null"
+            app:argType="string"/>
+        <argument
+            android:name="matkhau"
+            android:defaultValue="null"
+            app:argType="string"/>
+        <action
+            app:popUpTo="@+id/navigation_main"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.navigationcomponent30032020.SignUpFragment"

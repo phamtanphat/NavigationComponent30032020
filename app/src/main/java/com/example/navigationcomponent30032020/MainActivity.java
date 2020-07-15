@@ -8,16 +8,16 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    Fragment mHost;
+//    Fragment mHost;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mHost = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
-
-        NavHostFragment
-                .findNavController(mHost)
-                .navigate(R.id.action_loginFragment_to_homeFragment);
+//        mHost = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+//
+//        NavHostFragment
+//                .findNavController(mHost)
+//                .navigate(R.id.action_loginFragment_to_homeFragment);
     }
 }

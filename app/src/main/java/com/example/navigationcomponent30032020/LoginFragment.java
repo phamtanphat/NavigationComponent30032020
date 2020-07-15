@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginFragment extends Fragment {
@@ -35,9 +36,13 @@ public class LoginFragment extends Fragment {
         mSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation
-                        .findNavController(mView)
-                        .navigate(R.id.action_loginFragment_to_homeFragment);
+                String tk = mEdtTk.getText().toString();
+                String mk = mEdtMk.getText().toString();
+
+                LoginFragmentDirections.ActionLoginFragmentToHomeFragment action = LoginFragmentDirections.actionLoginFragmentToHomeFragment();
+                action.setMatkhau(mk);
+                action.setTaikhoan(tk);
+                Navigation.findNavController(mView).navigate(action);
             }
         });
         super.onActivityCreated(savedInstanceState);
